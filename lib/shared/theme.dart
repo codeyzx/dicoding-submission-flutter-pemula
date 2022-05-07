@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:intl/intl.dart';
 
 Color buttonMain = HexColor('#8C3FDB');
 TextStyle textButton = GoogleFonts.poppins(
@@ -179,4 +180,44 @@ TextStyle textButtonSuccess = GoogleFonts.poppins(
   color: buttonMain,
   fontWeight: FontWeight.w500,
   fontSize: 16.sp,
+);
+
+String convertToIdr(dynamic number) {
+  NumberFormat currencyFormatter = NumberFormat.currency(
+    locale: 'id',
+    symbol: 'Rp ',
+    decimalDigits: 0,
+  );
+  return currencyFormatter.format(number);
+}
+
+//split bill
+TextStyle nameSplit = GoogleFonts.poppins(
+  color: Colors.black.withOpacity(0.70),
+  fontWeight: FontWeight.w500,
+  fontSize: 14.sp,
+);
+
+TextStyle amountSplit = GoogleFonts.poppins(
+  color: Colors.black,
+  fontWeight: FontWeight.w600,
+  fontSize: 18.sp,
+);
+
+TextStyle statusSplit = GoogleFonts.poppins(
+  color: HexColor("#229A35"),
+  fontWeight: FontWeight.w500,
+  fontSize: 16.sp,
+);
+
+TextStyle statusSplitRed = GoogleFonts.poppins(
+  color: HexColor("#DB3F3F"),
+  fontWeight: FontWeight.w500,
+  fontSize: 16.sp,
+);
+
+TextStyle statusSplitRedSub = GoogleFonts.poppins(
+  color: HexColor("#DB3F3F"),
+  fontWeight: FontWeight.w400,
+  fontSize: 14.sp,
 );

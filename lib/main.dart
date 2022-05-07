@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:submission/request_page.dart';
+import 'package:submission/splitBill_page.dart';
 
 void main(List<String> args) {
   runApp(const MyApp());
@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: RequestPage(),
+      home: SplitBillPage(),
     );
   }
 }
